@@ -1,0 +1,48 @@
+td {
+  position: relative;
+}
+.active {
+  background-color:#9195F6;
+  color:#FFF;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index:1;
+    top: 0px;
+    left:0px;
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+    animation: ripple-effect 0.5s linear;
+  }
+}
+
+@keyframes ripple-effect {
+  0% {
+    background-color: #9195F6;
+  }
+  14.3% {
+    background-color: #B7C9F2;
+  }
+  28.6% {
+    background-color: #FAE8E0;
+  }
+  42.9% {
+    background-color: #D8A7B1;
+  }
+  57.2% {
+    background-color: #B6E2D3;
+  }
+  71.5% {
+    background-color: #B7C9F2;
+  }
+  85.8% {
+    background-color: #9195F6;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
